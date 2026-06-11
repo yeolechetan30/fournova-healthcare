@@ -3,6 +3,6 @@
   "version": 2,
   "outputDirectory": "dist/FourNova-Healthcare/browser",
   "rewrites": [
-    { "source": "^/(?!.*\\.[^/]+$)(.*)$", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
