@@ -1,6 +1,5 @@
-.about-contact-section {
+body {
   background-color: var(--bg-light);
-  width: 100%;
 }
 
 .about-contact-container {

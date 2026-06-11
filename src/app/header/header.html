@@ -2,8 +2,9 @@
   <div class="header-container">
     <!-- Logo -->
     <a href="#" class="logo">
-      <img src="assets/logo.png" alt="FourNova Healthcare Logo" class="logo-img" style="height:38px; vertical-align:middle;"/>
-        
+      <img src="assets/logo.png" alt="FourNova Healthcare Logo" class="logo-img"
+        style="height:38px; vertical-align:middle;" />
+
       <div class="logo-text">
         <span class="logo-main">FOURNOVA</span>
         <span class="logo-sub">HEALTHCARE</span>
@@ -12,13 +13,12 @@
 
     <!-- Navigation -->
     <nav class="nav-links" [class.open]="menuOpen">
-   <a mat-button routerLink="/" [class.active]="homeActive" class="nav-item" (click)="closeMenu()">Home</a>
-  <a mat-button routerLink="/products" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Products</a>
-  <a mat-button routerLink="/about" routerLinkActive="active" class="nav-item" (click)="closeMenu()">About Us</a>
-  <a mat-button routerLink="/services" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Services</a>
-  <a mat-button routerLink="/shop" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Shop</a>
-  <a mat-button routerLink="/contact" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Contact</a>
-</nav>
+      <a mat-button routerLink="/" [class.active]="homeActive" class="nav-item" (click)="closeMenu()">Home</a>
+      <a mat-button routerLink="/products" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Products</a>
+      <a mat-button routerLink="/about" routerLinkActive="active" class="nav-item" (click)="closeMenu()">About Us</a>
+      <a mat-button routerLink="/services" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Services</a>
+      <a mat-button routerLink="/contact" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Contact</a>
+    </nav>
 
     <!-- Header Action / Call -->
     <div class="header-contact">
@@ -28,6 +28,6 @@
       </a>
     </div>
   </div>
-<button class="menu-button" (click)="toggleMenu()" aria-label="Toggle navigation">
-  <mat-icon>menu</mat-icon>
-</button>
+  <button class="menu-button" (click)="toggleMenu()" aria-label="Toggle navigation">
+    <mat-icon>menu</mat-icon>
+  </button>

@@ -1,6 +1,17 @@
+.about-section {
+  background-color: var(--bg-light);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 21px 24px;
+}
+
+
 .about-card {
   background-color: var(--bg-white);
-  border-radius: 16px;
+  border-radius: 20px;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   display: flex;
