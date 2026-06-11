@@ -2,10 +2,7 @@
   "$schema": "https://vercel.com/static/schema.json",
   "version": 2,
   "outputDirectory": "dist/FourNova-Healthcare/browser",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+  "rewrites": [
+    { "source": "^/(?!.*\\.[^/]+$)(.*)$", "destination": "/index.html" }
   ]
 }
