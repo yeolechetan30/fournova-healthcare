@@ -1,0 +1,176 @@
+.products-section {
+  background-color: var(--bg-white);
+  width: 100%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.product-card {
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.product-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* remove padding to let image fill */
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* fill wrapper fully */
+  transition: transform 0.5s ease;
+}
+
+.product-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-info {
+  padding: 12px;
+  text-align: left;
+  border-top: 1px solid var(--border-color);
+}
+
+.product-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.product-price-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price-prefix {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+/* Hover effects */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+/* Actions */
+.products-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.view-all-btn {
+  background-color: var(--primary-color);
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.view-all-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+
+/* Paragraph background for product sections */
+.section-card p {
+  background: var(--bg-light);
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  margin-top: 0.3rem;
+}
+
+/* Paragraph background for product sections (more specific) */
+.section-card mat-card-content p {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 21px 24px;
+}
+
+/* Horizontal heading & paragraph layout within product cards */
+.section-card mat-card-content {
+  display: flex;
+  flex-direction: column;
+  /* heading above paragraph */
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.section-card mat-card-content h2 {
+  margin: 0;
+  flex: none;
+}
+
+.section-card mat-card-content p {
+  margin: 0;
+  flex: none;
+}

@@ -1,0 +1,250 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  background:#fff;
+  padding-bottom: 60px;
+}
+
+.hero-banner {
+  width: 100%;
+  min-height: 480px;
+  background: linear-gradient(105deg, #0a4683 0%, #0d5aa7 45%, #1b70c3 70%, #f1f6fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  padding: 40px 0 80px 0;
+  z-index: 2;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-title .highlight {
+  color: #a3e635; /* Lime Accent or soft light green */
+  font-size: 3.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-material {
+  background-color: #0b2647 !important;
+  color: #ffffff !important;
+  padding: 12px 28px !important;
+  border-radius: 8px !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  height: auto !important;
+  line-height: inherit !important;
+  box-shadow: 0 4px 12px rgba(11, 38, 71, 0.3) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.btn-primary-material:hover {
+  background-color: #051428 !important;
+  transform: translateY(-2px);
+}
+
+.btn-accent-material {
+  background-color: var(--accent-color) !important;
+  color: #ffffff !important;
+  padding: 12px 28px !important;
+  border-radius: 8px !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  height: auto !important;
+  line-height: inherit !important;
+  box-shadow: 0 4px 12px rgba(46, 167, 96, 0.3) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.btn-accent-material:hover {
+  background-color: var(--accent-hover) !important;
+  transform: translateY(-2px);
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  z-index: 1;
+}
+
+.hero-image {
+  max-height: 480px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: bottom;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* Quick Actions */
+.quick-actions-container {
+  max-width: 1200px;
+  margin: -60px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+mat-card.action-card {
+  background-color: var(--bg-white) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: var(--transition-smooth) !important;
+  overflow: hidden;
+}
+
+.action-card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.action-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ebf3fc;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: var(--transition-smooth);
+}
+
+.action-title {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--dark-color);
+  transition: var(--transition-smooth);
+}
+
+/* Action Card Hover Effects */
+mat-card.action-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--primary-color) !important;
+}
+
+mat-card.action-card:hover .action-icon-wrapper {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-banner {
+    flex-direction: column;
+    padding: 60px 40px 100px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .hero-image-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  .hero-image {
+    max-height: 320px;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-title .highlight {
+    font-size: 2.5rem;
+  }
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+  .quick-actions-container {
+    margin-top: -40px;
+  }
+}

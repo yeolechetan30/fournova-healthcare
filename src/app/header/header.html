@@ -1,0 +1,33 @@
+<mat-toolbar class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <img src="assets/logo.png" alt="FourNova Healthcare Logo" class="logo-img" style="height:38px; vertical-align:middle;"/>
+        
+      <div class="logo-text">
+        <span class="logo-main">FOURNOVA</span>
+        <span class="logo-sub">HEALTHCARE</span>
+      </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav-links" [class.open]="menuOpen">
+   <a mat-button routerLink="/" [class.active]="homeActive" class="nav-item">Home</a>
+  <a mat-button routerLink="/products" routerLinkActive="active" class="nav-item">Products</a>
+  <a mat-button routerLink="/about" routerLinkActive="active" class="nav-item">About Us</a>
+  <a mat-button routerLink="/services" routerLinkActive="active" class="nav-item">Services</a>
+  <a mat-button routerLink="/shop" routerLinkActive="active" class="nav-item">Shop</a>
+  <a mat-button routerLink="/contact" routerLinkActive="active" class="nav-item">Contact</a>
+</nav>
+
+    <!-- Header Action / Call -->
+    <div class="header-contact">
+      <a mat-button href="tel:+1234567890" class="contact-link">
+        <mat-icon class="phone-icon">phone</mat-icon>
+        <span>+123-456-7890</span>
+      </a>
+    </div>
+  </div>
+<button class="menu-button" (click)="toggleMenu()" aria-label="Toggle navigation">
+  <mat-icon>menu</mat-icon>
+</button>

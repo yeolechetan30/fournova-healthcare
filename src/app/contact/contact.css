@@ -1,0 +1,91 @@
+.contact-card {
+  background-color: var(--bg-white);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition-smooth);
+}
+
+.contact-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.contact-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent-color); /* Green Accent matching the image */
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--body-color);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--body-color);
+}
+
+.contact-item a:hover {
+  color: var(--primary-color);
+}
+
+/* Find Us Badge */
+.find-us-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--dark-color);
+  margin-bottom: 12px;
+}
+
+/* Map Container */
+.map-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin-top: auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.map-container iframe {
+  display: block;
+}

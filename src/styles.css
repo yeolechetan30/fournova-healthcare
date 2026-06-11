@@ -1,0 +1,180 @@
+/* Premium Design System for Chemist Ferm & Clinic */
+
+:root {
+  /* Color Palette */
+  --primary-color: #0d5aa7;       /* Royal Blue */
+  --primary-hover: #0a4683;
+  --secondary-color: #2b9ddb;     /* Light Sky Blue */
+  --accent-color: #2ea760;        /* Health Green */
+  --accent-hover: #23854b;
+  --dark-color: #0b1c33;          /* Dark Navy for Text/Headings */
+  --body-color: #4a5d73;          /* Slate Grey for body text */
+  --bg-light: #f5f8fc;            /* Soft Cool Grey/Blue for Section BG */
+  --bg-white: #ffffff;
+  --border-color: #e2ebf5;
+  
+  /* Fonts */
+  --font-headings: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(13, 90, 167, 0.05);
+  --shadow-md: 0 8px 24px rgba(13, 90, 167, 0.08);
+  --shadow-lg: 0 16px 40px rgba(13, 90, 167, 0.12);
+  --shadow-hover: 0 20px 48px rgba(13, 90, 167, 0.18);
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-white);
+  color: var(--body-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--dark-color);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Button Reset */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: var(--transition-smooth);
+}
+
+/* Anchor tags */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+/* Utility Layouts */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 48px;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Premium Button Styles */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(13, 90, 167, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 90, 167, 0.3);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(46, 167, 96, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 167, 96, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline:hover {
+  background-color: rgba(13, 90, 167, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Angular Material Adjustments */
+mat-toolbar {
+  font-family: var(--font-headings) !important;
+}
+
+mat-card {
+  border-radius: 12px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+  background-color: var(--bg-white) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+mat-card:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-4px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
