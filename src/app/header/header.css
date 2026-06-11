@@ -155,9 +155,26 @@ mat-toolbar.header {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .nav-links {
-    display: none;
-    /* Hide on tablet/mobile */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background: var(--bg-white);
+      padding: 1rem 2rem;
+      gap: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      z-index: 1001;
+    }
+
+    .nav-links.open {
+      max-height: 500px; /* enough for all items */
+      opacity: 1;
+    }
   }
-}

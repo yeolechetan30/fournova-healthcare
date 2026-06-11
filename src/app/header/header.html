@@ -12,12 +12,12 @@
 
     <!-- Navigation -->
     <nav class="nav-links" [class.open]="menuOpen">
-   <a mat-button routerLink="/" [class.active]="homeActive" class="nav-item">Home</a>
-  <a mat-button routerLink="/products" routerLinkActive="active" class="nav-item">Products</a>
-  <a mat-button routerLink="/about" routerLinkActive="active" class="nav-item">About Us</a>
-  <a mat-button routerLink="/services" routerLinkActive="active" class="nav-item">Services</a>
-  <a mat-button routerLink="/shop" routerLinkActive="active" class="nav-item">Shop</a>
-  <a mat-button routerLink="/contact" routerLinkActive="active" class="nav-item">Contact</a>
+   <a mat-button routerLink="/" [class.active]="homeActive" class="nav-item" (click)="closeMenu()">Home</a>
+  <a mat-button routerLink="/products" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Products</a>
+  <a mat-button routerLink="/about" routerLinkActive="active" class="nav-item" (click)="closeMenu()">About Us</a>
+  <a mat-button routerLink="/services" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Services</a>
+  <a mat-button routerLink="/shop" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Shop</a>
+  <a mat-button routerLink="/contact" routerLinkActive="active" class="nav-item" (click)="closeMenu()">Contact</a>
 </nav>
 
     <!-- Header Action / Call -->
