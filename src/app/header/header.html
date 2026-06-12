@@ -1,5 +1,10 @@
 <mat-toolbar class="header">
   <div class="header-container">
+    <!-- Menu Button (Mobile drawer toggle) -->
+    <button class="menu-button" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <mat-icon>menu</mat-icon>
+    </button>
+
     <!-- Logo -->
     <a href="#" class="logo">
       <img src="assets/logo.png" alt="FourNova Healthcare Logo" class="logo-img"
@@ -28,6 +33,4 @@
       </a>
     </div>
   </div>
-  <button class="menu-button" (click)="toggleMenu()" aria-label="Toggle navigation">
-    <mat-icon>menu</mat-icon>
-  </button>
+</mat-toolbar>
