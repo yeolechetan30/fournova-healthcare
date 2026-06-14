@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.angular
+Disallow: /.git
+
+Sitemap: https://fournova.in/sitemap.xml
