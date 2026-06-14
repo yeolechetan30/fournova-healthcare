@@ -1,8 +1,20 @@
 {
   "$schema": "https://vercel.com/static/schema.json",
   "version": 2,
-  "outputDirectory": "dist/FourNova-Healthcare/browser",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/FourNova-Healthcare"
+      }
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "cleanUrls": true
+}
