@@ -37,13 +37,12 @@
           <button
             class="value-label"
             type="button"
-            (click)="toggleValueTooltip(i)"
-            (dblclick)="closeValueTooltip()"
+            (click)="toggleValueTooltip(i, $event)"
             aria-expanded="{{ activeValueIndex === i }}"
           >
             {{ value.label }}
           </button>
-          <span class="value-tooltip" role="tooltip">
+          <span *ngIf="activeValueIndex === i" class="value-tooltip" role="tooltip">
             {{ value.text }}
           </span>
         </div>
