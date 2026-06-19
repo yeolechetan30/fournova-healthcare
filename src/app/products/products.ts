@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
-import { NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [NgFor, MatGridListModule, MatCardModule, RouterModule],
+  imports: [MatGridListModule, MatCardModule, RouterModule],
   templateUrl: './products.html',
   styleUrl: './products.css',
 })
