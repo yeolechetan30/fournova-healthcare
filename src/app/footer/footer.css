@@ -92,86 +92,105 @@
 /* Links List */
 .footer-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.footer-links li {
+  margin: 0;
 }
 
 .footer-links a {
-  font-size: 0.9rem;
+  display: block;
+  font-size: 0.95rem;
   color: #94a3b8;
-  transition: var(--transition-smooth);
+  padding: 14px 18px;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-links li:last-child a {
+  border-bottom: none;
 }
 
 .footer-links a:hover {
   color: #ffffff;
-  padding-left: 4px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Core Values */
 .value-item {
   position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 8px;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .value-label {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #ffffff;
   font-family: var(--font-headings);
   font-size: 0.95rem;
   font-weight: 600;
-  padding: 10px 14px;
-  border-radius: 999px;
+  padding: 16px 20px;
+  border-radius: 0;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.value-item:first-child .value-label {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.value-item:last-child .value-label {
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .value-label:hover,
 .value-label:focus {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.25);
   outline: none;
+  transform: translateX(1px);
 }
 
 .value-tooltip {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  right: auto;
-  width: max-content;
-  max-width: 240px;
-  background: rgba(15, 23, 42, 0.95);
-  color: #ffffff;
-  padding: 12px 14px;
-  border-radius: 12px;
-  font-size: 0.88rem;
-  line-height: 1.5;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
-  opacity: 0;
+  width: 100%;
+  background: #fff7c0;
+  color: #0f172a;
+  padding: 0;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.12);
   visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  z-index: 5;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: transform 0.2s ease, visibility 0.2s ease;
+  z-index: 10;
 }
 
 .value-item.active .value-tooltip {
-  opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  padding: 14px 16px;
 }
 
 /* Business Hours List */
