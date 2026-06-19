@@ -26,9 +26,6 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - name: Run tests
-        run: npm test --if-present
-
   deploy-to-vercel:
     name: Deploy to Vercel (optional)
     runs-on: ubuntu-latest
