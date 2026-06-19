@@ -29,16 +29,22 @@
         </ul>
       </div>
 
-      <!-- Column 3: Hours -->
-      <div class="footer-col hours-col">
-        <h4 class="footer-heading">Business Hours</h4>
-        <ul class="footer-hours">
-          <li><span class="day">Monday - Friday:</span> <span class="time">8:00 AM - 10:00 PM</span></li>
-          <li><span class="day">Saturday:</span> <span class="time">9:00 AM - 8:00 PM</span></li>
-          <li><span class="day">Sunday:</span> <span class="time">10:00 AM - 6:00 PM</span></li>
-          <li><span class="day emergency">Emergency Care:</span> <span class="time emergency-time">24/7 Available</span>
-          </li>
-        </ul>
+      <!-- Column 3: Core Values -->
+      <div class="footer-col values-col">
+        <h4 class="footer-heading">Our Core Values</h4>
+        <div class="value-item" *ngFor="let value of coreValues; let i = index" [class.active]="activeValueIndex === i">
+          <button
+            class="value-label"
+            type="button"
+            (click)="toggleValueTooltip(i)"
+            aria-expanded="{{ activeValueIndex === i }}"
+          >
+            {{ value.label }}
+          </button>
+          <span class="value-tooltip" role="tooltip">
+            {{ value.text }}
+          </span>
+        </div>
       </div>
     </div>
 

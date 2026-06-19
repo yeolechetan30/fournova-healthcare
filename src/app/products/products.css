@@ -168,6 +168,37 @@
   margin-top: 0.3rem;
 }
 
+.therapeutic-segments {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.therapeutic-segments .about-title {
+  margin-bottom: 20px;
+}
+
+.segment-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.segment-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: var(--dark-color);
+  font-family: var(--font-headings);
+  font-weight: 400;
+}
+
 /* Paragraph background for product sections (more specific) */
 .section-card mat-card-content p {
   background: rgba(255, 255, 255, 0.6);
