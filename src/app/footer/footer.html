@@ -3,10 +3,10 @@
     <div class="footer-grid">
       <!-- Column 1: Brand -->
       <div class="footer-col brand-col">
-        <a href="#" class="footer-logo">
+        <a routerLink="/" class="footer-logo">
           <!-- <svg width="30" height="30" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="38" height="38" rx="8" fill="#ffffff"/>
-            <path d="M16 10H22V16H28V22H22V28H16V22H10V16H16V10Z" fill="#0d5aa7"/>
+            <path d="M16 10H22V16H28V22H22V28H16V22V16H10V16H16V10Z" fill="#0d5aa7"/>
           </svg> -->
           <img src="assets/logo.png" alt="FourNova Healthcare Logo" class="logo-img"
             style="height:38px; vertical-align:middle;" />
@@ -21,11 +21,12 @@
       <div class="footer-col links-col">
         <h4 class="footer-heading">Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#shop">Featured Products</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/products">Products</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/mission">Our Mission</a></li>
+          <li><a routerLink="/services">Benefit</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
         </ul>
       </div>
 
@@ -37,6 +38,7 @@
             class="value-label"
             type="button"
             (click)="toggleValueTooltip(i)"
+            (dblclick)="closeValueTooltip()"
             aria-expanded="{{ activeValueIndex === i }}"
           >
             {{ value.label }}

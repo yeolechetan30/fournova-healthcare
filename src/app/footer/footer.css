@@ -17,12 +17,21 @@
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 48px;
   margin-bottom: 48px;
+  animation: fadeInUp 0.6s ease both;
 }
 
 .footer-col {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.value-item {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeInUp 0.45s ease both;
 }
 
 /* Brand Col */
@@ -148,12 +157,21 @@
   z-index: 5;
 }
 
-.value-item:hover .value-tooltip,
-.value-label:focus + .value-tooltip,
-.value-item.active .value-tooltip {
+..value-item.active .value-tooltip {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Business Hours List */

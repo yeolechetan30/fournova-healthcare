@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-footer',
-  imports: [NgFor, MatGridListModule, MatCardModule, MatToolbarModule],
+  imports: [NgFor, RouterModule, MatGridListModule, MatCardModule, MatToolbarModule],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
 export class Footer {
+  constructor(private elementRef: ElementRef<HTMLElement>) {}
   coreValues = [
     {
       label: 'Quality',
@@ -38,5 +40,24 @@ export class Footer {
 
   toggleValueTooltip(index: number) {
     this.activeValueIndex = this.activeValueIndex === index ? null : index;
+  }
+
+  closeValueTooltip() {
+    this.activeValueIndex = null;
+  }
+
+  @HostListener('document:click', ['$event'])
+  closeTooltipOnClickOutside(event: Event) {
+    const target = event.target as HTMLElement;
+
+    if (!this.elementRef.nativeElement.contains(target)) {
+      this.activeValueIndex = null;
+      return;
+    }
+
+    const clickedValueItem = target.closest('.value-item');
+    if (!clickedValueItem) {
+      this.activeValueIndex = null;
+    }
   }
 }
