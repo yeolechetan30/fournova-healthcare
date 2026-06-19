@@ -157,7 +157,7 @@
   z-index: 5;
 }
 
-..value-item.active .value-tooltip {
+.value-item.active .value-tooltip {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
