@@ -22,6 +22,7 @@
   /* default: image left, text right */
   align-items: stretch;
   transition: var(--transition-smooth);
+  animation: fadeInScale 0.55s ease both;
 }
 
 .product-card.reverse {
@@ -116,10 +117,11 @@
 }
 
 /* Hover effects */
-.product-card:hover {
+.product-card:hover,
+.product-card.reverse:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-md);
-  border-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
 }
 
 .product-card:hover .product-image {

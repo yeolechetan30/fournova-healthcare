@@ -16,12 +16,14 @@
   display: flex;
   overflow: hidden;
   transition: var(--transition-smooth);
+  animation: fadeInScale 0.55s ease both;
   min-height: 380px;
 }
 
 .contact-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
+  border: 1px solid var(--primary-color) !important;
 }
 
 .contact-info {
