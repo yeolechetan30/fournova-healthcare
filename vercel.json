@@ -3,22 +3,18 @@
   "version": 2,
   "outputDirectory": "dist/FourNova-Healthcare/browser",
   "cleanUrls": true,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
+      "src": "/(sitemap\\.xml|robots\\.txt|google97a22dc9081d2482\\.html)",
+      "continue": true,
+      "headers": { "Cache-Control": "public, max-age=0, must-revalidate" }
     },
     {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "handle": "filesystem"
     },
     {
-      "source": "/google97a22dc9081d2482.html",
-      "destination": "/google97a22dc9081d2482.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
