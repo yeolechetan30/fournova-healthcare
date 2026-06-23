@@ -5,16 +5,23 @@
   "cleanUrls": true,
   "routes": [
     {
-      "src": "/(sitemap\\.xml|robots\\.txt|google97a22dc9081d2482\\.html)",
-      "continue": true,
-      "headers": { "Cache-Control": "public, max-age=0, must-revalidate" }
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/google97a22dc9081d2482.html",
+      "dest": "/google97a22dc9081d2482.html"
     },
     {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html"
     }
   ]
 }
