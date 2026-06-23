@@ -30,8 +30,7 @@ paths.forEach(p => {
 xml += '</urlset>'; // close the tag
 
 // Ensure the output folder exists – ts-node may run before a build creates "dist".
-const outDir = resolve('dist');
+const outDir = resolve('dist', 'FourNova-Healthcare', 'browser');
 mkdirSync(outDir, { recursive: true });
-
-writeFileSync(resolve(outDir, 'browser', 'sitemap.xml'), xml);
-console.log('✅ sitemap.xml generated at', resolve(outDir, 'browser', 'sitemap.xml'));
+writeFileSync(resolve(outDir, 'sitemap.xml'), xml);
+console.log('✅ sitemap.xml generated at', resolve(outDir, 'sitemap.xml'));

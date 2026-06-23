@@ -37,7 +37,8 @@ app.use(
 
 // Serve sitemap.xml explicitly
 app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(join(browserDistFolder, 'sitemap.xml'));
+  const sitemapPath = resolve('dist', 'FourNova-Healthcare', 'browser', 'sitemap.xml');
+  res.sendFile(sitemapPath);
 });
 
 /**
