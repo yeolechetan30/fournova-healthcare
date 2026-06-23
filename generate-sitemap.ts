@@ -33,5 +33,5 @@ xml += '</urlset>'; // close the tag
 const outDir = resolve('dist');
 mkdirSync(outDir, { recursive: true });
 
-writeFileSync(resolve(outDir, 'sitemap.xml'), xml);
-console.log('✅ sitemap.xml generated at', resolve(outDir, 'sitemap.xml'));
+writeFileSync(resolve(outDir, 'browser', 'sitemap.xml'), xml);
+console.log('✅ sitemap.xml generated at', resolve(outDir, 'browser', 'sitemap.xml'));

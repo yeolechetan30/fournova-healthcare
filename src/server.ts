@@ -35,6 +35,11 @@ app.use(
   }),
 );
 
+// Serve sitemap.xml explicitly
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(join(browserDistFolder, 'sitemap.xml'));
+});
+
 /**
  * Handle all other requests by rendering the Angular application.
  */
