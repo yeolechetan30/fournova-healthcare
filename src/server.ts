@@ -37,10 +37,9 @@ app.use(
 
 // Serve sitemap.xml explicitly
 app.get('/sitemap.xml', (req, res) => {
-  const sitemapPath = resolve('dist', 'FourNova-Healthcare', 'browser', 'sitemap.xml');
+  const sitemapPath = join(browserDistFolder, 'assets', 'sitemap.xml');
   res.sendFile(sitemapPath);
 });
-
 /**
  * Handle all other requests by rendering the Angular application.
  */
