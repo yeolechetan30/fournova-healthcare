@@ -3,6 +3,9 @@
   "version": 2,
   "outputDirectory": "dist/FourNova-Healthcare/browser",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/google97a22dc9081d2482.html",
+      "destination": "/browser/google97a22dc9081d2482.html"
+    }
   ]
 }
