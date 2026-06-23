@@ -3,9 +3,13 @@
   "version": 2,
   "outputDirectory": "dist/FourNova-Healthcare/browser",
   "rewrites": [
+     {
+      "source": "/sitemap.xml",
+      "destination": "/browser/sitemap.xml"
+    },
     {
-      "source": "/google97a22dc9081d2482.html",
-      "destination": "/browser/google97a22dc9081d2482.html"
+      "source": "/robots.txt",
+      "destination": "/browser/robots.txt"
     }
   ]
 }
