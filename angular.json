@@ -20,7 +20,12 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "google97a22dc9081d2482.html",
+                "input": "src/assets",
+                "output": "/"
+              }
             ],
             "styles": ["src/material-theme.scss", "src/styles.css"],
             "server": "src/main.server.ts",
