@@ -1,15 +1,26 @@
 {
   "$schema": "https://vercel.com/static/schema.json",
   "version": 2,
-  "outputDirectory": "dist/FourNova-Healthcare/browser",
-  "rewrites": [
-     {
-      "source": "/sitemap.xml",
-      "destination": "/browser/sitemap.xml"
+  "outputDirectory": "dist/FourNova-Healthcare",
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/browser/sitemap.xml"
     },
     {
-      "source": "/robots.txt",
-      "destination": "/browser/robots.txt"
+      "src": "/robots.txt",
+      "dest": "/browser/robots.txt"
+    },
+    {
+      "src": "/google97a22dc9081d2482.html",
+      "dest": "/browser/google97a22dc9081d2482.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server/server.mjs"
     }
   ]
 }
