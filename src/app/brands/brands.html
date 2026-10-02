@@ -1,0 +1,37 @@
+<section class="brands-section">
+  <div class="section-container">
+    <!-- <div class="intro-block">
+      <p class="eyebrow">OUR PORTFOLIO</p>
+      <h1 class="page-title">Trusted Brands. Better Care.</h1>
+      <p class="lead">
+        FourNova Healthcare partners with leading pharmaceutical and wellness-focused brands to create a care ecosystem that
+        is reliable, modern, and patient-first.
+      </p>
+    </div> -->
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img [src]="featuredBrand.image" [alt]="featuredBrand.name" />
+      </div>
+
+      <div class="product-content">
+        <!-- <p class="product-tag">Featured Product</p> -->
+        <h2>{{ featuredBrand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ featuredBrand.category }}</span>
+          <span>{{ featuredBrand.dosage }}</span>
+        </div>
+        <p>{{ featuredBrand.description }}</p>
+
+        <ul class="feature-list">
+          <li><strong>Flavour:</strong> {{ featuredBrand.flavour }}</li>
+          <li><strong>Pack Size:</strong> {{ featuredBrand.size }}</li>
+          <li><strong>Use:</strong> Daily health and immunity support</li>
+          <li><strong>Price:</strong> ₹65.00/bottle</li>
+        </ul>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
