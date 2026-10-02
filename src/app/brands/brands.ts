@@ -62,7 +62,7 @@ export class Brands implements OnInit {
     category: 'Vitamin D3 Oral Solution',
     description:
       'Dailyxa 60K is a doctor-trusted Vitamin D3 oral solution formulated to support immunity, bone strength, and overall wellness in a convenient daily format.',
-    image: 'assets/images/dailyxa-60k.jpeg',
+    image: 'assets/images/dailyxa-60k.png',
     dosage: '60,000 IU',
     flavour: 'Orange Flavour',
     size: '5 ml',
