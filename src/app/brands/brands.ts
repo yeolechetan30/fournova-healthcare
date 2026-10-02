@@ -45,7 +45,7 @@ export class Brands implements OnInit {
         '@type': 'Brand',
         name: 'FourNova Healthcare',
       },
-      category: 'Vitamin D3 Oral Solution',
+      category: 'Vitamin D3 Oral Solution ',
       sku: 'DNV-D3-60K',
       mpn: 'D3-60K-001',
       keywords,
@@ -62,7 +62,7 @@ export class Brands implements OnInit {
     category: 'Vitamin D3 Oral Solution',
     description:
       'Dailyxa 60K is a doctor-trusted Vitamin D3 oral solution formulated to support immunity, bone strength, and overall wellness in a convenient daily format.',
-    image: 'assets/images/dailyxa-60k.png',
+    image: 'assets/images/daily_xa-60k.png',
     dosage: '60,000 IU',
     flavour: 'Orange Flavour',
     size: '5 ml',
