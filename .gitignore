@@ -1,9 +1,14 @@
 ﻿node_modules/
 dist/
 .angular/
+*.tsbuildinfo
+.cache/
+coverage/
 .env
 .DS_Store
 .idea/
 .vscode/
 *.log
 .vercel
+npm-debug.log*
+
