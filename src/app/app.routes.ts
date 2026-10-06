@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'products', component: Products },
   { path: 'brands', component: Brands },
+  { path: 'dailyxa-60k', component: Brands },
   { path: 'services', component: Services },
   { path: 'about', component: About },
   { path: 'mission', component: Mission },

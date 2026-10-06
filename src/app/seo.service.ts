@@ -25,6 +25,21 @@ export class SeoService {
     this.meta.updateTag({ name: 'keywords', content: keywords });
   }
 
+  setCanonical(url: string) {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute('href', url);
+  }
+
   setOpenGraph(tags: { title: string; description: string; image: string }) {
     this.meta.updateTag({ property: 'og:title', content: tags.title });
     this.meta.updateTag({ property: 'og:description', content: tags.description });
