@@ -19,4 +19,10 @@ describe('Brands', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should declare the brands route as its canonical URL', () => {
+    const canonical = document.querySelector('link[rel="canonical"]');
+
+    expect(canonical?.getAttribute('href')).toBe('https://fournova.in/brands');
+  });
 });

@@ -29,7 +29,7 @@ export class Brands implements OnInit {
       'FourNova Healthcare Dailyxa',
     ].join(', ');
     const img = 'https://fournova.in/assets/images/dailyxa-60k.png';
-    const canonicalUrl = 'https://fournova.in/dailyxa-60k';
+    const canonicalUrl = 'https://fournova.in/brands';
 
     this.seo.setTitle(title);
     this.seo.updateDescription(desc);
