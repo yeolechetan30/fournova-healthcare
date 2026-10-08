@@ -1,8 +1,11 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { inject, Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
+  private readonly document = inject(DOCUMENT);
+
   constructor(private title: Title, private meta: Meta) {}
 
   setTitle(pageTitle: string) {
@@ -26,18 +29,15 @@ export class SeoService {
   }
 
   setCanonical(url: string) {
-    if (typeof document === 'undefined') {
-      return;
-    }
-
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    let canonical = this.document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!canonical) {
-      canonical = document.createElement('link');
+      canonical = this.document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+      this.document.head.appendChild(canonical);
     }
 
     canonical.setAttribute('href', url);
+    this.meta.updateTag({ property: 'og:url', content: url });
   }
 
   setOpenGraph(tags: { title: string; description: string; image: string }) {
@@ -53,23 +53,15 @@ export class SeoService {
   }
 
   setJsonLd(data: Record<string, unknown>) {
-    if (typeof document === 'undefined') {
-      return;
-    }
-
     this.removeJsonLd();
-    const script = document.createElement('script');
+    const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(data);
-    document.head.appendChild(script);
+    this.document.head.appendChild(script);
   }
 
   private removeJsonLd() {
-    if (typeof document === 'undefined') {
-      return;
-    }
-
-    const existing = document.querySelectorAll('script[type="application/ld+json"]');
+    const existing = this.document.querySelectorAll('script[type="application/ld+json"]');
     existing.forEach((script) => script.remove());
   }
 }
