@@ -3,6 +3,7 @@
   "version": 2,
   "outputDirectory": "dist/FourNova-Healthcare/browser",
   "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
     {
       "src": "/sitemap.xml",
