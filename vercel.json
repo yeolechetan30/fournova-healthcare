@@ -7,11 +7,11 @@
   "rewrites": [
     {
       "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
+      "destination": "/public/sitemap.xml"
     },
     {
       "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "destination": "/public/robots.txt"
     },
     {
       "source": "/google97a22dc9081d2482.html",
