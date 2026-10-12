@@ -28,8 +28,8 @@ export class Brands implements OnInit {
       'Immunity booster supplement',
       'FourNova Healthcare Dailyxa',
     ].join(', ');
-    const img = 'https://fournova.in/assets/images/dailyxa-60k.png';
-    const canonicalUrl = 'https://fournova.in/brands';
+    const img = 'https://www.fournova.in/assets/images/dailyxa-60k.png';
+    const canonicalUrl = 'https://www.fournova.in/brands';
 
     this.seo.setTitle(title);
     this.seo.updateDescription(desc);

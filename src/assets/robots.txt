@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fournova.in/sitemap.xml
+Sitemap: https://www.fournova.in/sitemap.xml

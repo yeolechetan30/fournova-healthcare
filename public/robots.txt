@@ -4,4 +4,4 @@ Disallow: /admin
 Disallow: /.angular
 Disallow: /.git
 
-Sitemap: https://fournova.in/sitemap.xml
+Sitemap: https://www.fournova.in/sitemap.xml

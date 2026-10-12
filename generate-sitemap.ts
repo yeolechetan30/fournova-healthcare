@@ -2,14 +2,14 @@ import { writeFileSync, mkdirSync, readFileSync } from 'fs';
 import { resolve } from 'path';
 
 // Base URL of the live site – change if you use a different domain.
-const base = 'https://fournova.in';
+const base = 'https://www.fournova.in';
 
 // Path to the routes definition file.
 const routesFile = resolve('src', 'app', 'app.routes.ts');
 
 // Extract only the path strings from the file using a simple regex.
 // This avoids importing Angular components which can cause runtime errors.
-const fileContent = readFileSync(routesFile, 'utf-8');
+const fileContent = readFileSync(routesFile, 'utf-8').replace(/^\s*\/\/.*$/gm, '');
 const pathRegex = /{\s*path\s*:\s*'([^']*)'/g;
 const paths: string[] = [];
 let match: RegExpExecArray | null;
@@ -29,8 +29,8 @@ paths.forEach(p => {
 
 xml += '</urlset>'; // close the tag
 
-// Ensure the output folder exists – ts-node may run before a build creates "dist".
-const outDir = resolve('src', 'assets');
+// Generate into the public directory so the sitemap is copied into the build output.
+const outDir = resolve('public');
 mkdirSync(outDir, { recursive: true });
 
 writeFileSync(resolve(outDir, 'sitemap.xml'), xml);

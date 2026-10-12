@@ -23,6 +23,6 @@ describe('Brands', () => {
   it('should declare the brands route as its canonical URL', () => {
     const canonical = document.querySelector('link[rel="canonical"]');
 
-    expect(canonical?.getAttribute('href')).toBe('https://fournova.in/brands');
+    expect(canonical?.getAttribute('href')).toBe('https://www.fournova.in/brands');
   });
 });
