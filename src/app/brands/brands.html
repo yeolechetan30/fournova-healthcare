@@ -11,7 +11,7 @@
 
     <div class="featured-product">
       <div class="product-image-wrap">
-        <img [src]="featuredBrand.image" [alt]="featuredBrand.name" />
+        <img [ngSrc]="featuredBrand.image" [alt]="featuredBrand.name" width="480" height="480" />
       </div>
 
       <div class="product-content">
@@ -29,6 +29,204 @@
           <li><strong>Use:</strong> Daily health and immunity support</li>
           <li><strong>Price:</strong> ₹65.00/bottle</li>
         </ul>
+        <a class="product-link" routerLink="/dailyxa-60k">View Dailyxa 60K details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img
+          [ngSrc]="dailyxaTabletsBrand.image"
+          [alt]="dailyxaTabletsBrand.name + ' product packaging'"
+          width="480"
+          height="480"
+        />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ dailyxaTabletsBrand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ dailyxaTabletsBrand.category }}</span>
+          <span>{{ dailyxaTabletsBrand.dosage }}</span>
+        </div>
+        <p>{{ dailyxaTabletsBrand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ dailyxaTabletsBrand.size }}</li>
+          <li><strong>Price:</strong> {{ dailyxaTabletsBrand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/dailyxa-tablets">View Dailyxa Tablets details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img
+          [ngSrc]="raftGoBrand.image"
+          [alt]="raftGoBrand.name + ' product packaging'"
+          width="480"
+          height="480"
+        />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ raftGoBrand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ raftGoBrand.category }}</span>
+          <span>{{ raftGoBrand.dosage }}</span>
+        </div>
+        <p>{{ raftGoBrand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ raftGoBrand.size }}</li>
+          <li><strong>Price:</strong> {{ raftGoBrand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/raft-go">View Raft GO details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img [ngSrc]="sobinovaBrand.image" [alt]="sobinovaBrand.name" width="480" height="480" />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ sobinovaBrand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ sobinovaBrand.category }}</span>
+          <span>{{ sobinovaBrand.dosage }}</span>
+        </div>
+        <p>{{ sobinovaBrand.description }}</p>
+
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ sobinovaBrand.size }}</li>
+          <li><strong>Use:</strong> {{ sobinovaBrand.use }}</li>
+          <li><strong>Price:</strong> {{ sobinovaBrand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/sobinova-500">View Sobinova-500 details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img [ngSrc]="hbfourXBrand.image" [alt]="hbfourXBrand.name" width="480" height="480" />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ hbfourXBrand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ hbfourXBrand.category }}</span>
+          <span>{{ hbfourXBrand.dosage }}</span>
+        </div>
+        <p>{{ hbfourXBrand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ hbfourXBrand.size }}</li>
+          <li><strong>Use:</strong> {{ hbfourXBrand.use }}</li>
+          <li><strong>Price:</strong> {{ hbfourXBrand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/hbfour-x">View Hbfour-X details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img
+          [ngSrc]="sobinovaForteBrand.image"
+          [alt]="sobinovaForteBrand.name + ' product packaging'"
+          width="480"
+          height="480"
+        />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ sobinovaForteBrand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ sobinovaForteBrand.category }}</span>
+          <span>{{ sobinovaForteBrand.dosage }}</span>
+        </div>
+        <p>{{ sobinovaForteBrand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ sobinovaForteBrand.size }}</li>
+          <li><strong>Use:</strong> {{ sobinovaForteBrand.use }}</li>
+          <li><strong>Price:</strong> {{ sobinovaForteBrand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/sobinova-forte">View Sobinova Forte details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img
+          [ngSrc]="fourSprinGold10Brand.image"
+          [alt]="fourSprinGold10Brand.name + ' product packaging'"
+          width="480"
+          height="480"
+        />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ fourSprinGold10Brand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ fourSprinGold10Brand.category }}</span>
+          <span>{{ fourSprinGold10Brand.dosage }}</span>
+        </div>
+        <p>{{ fourSprinGold10Brand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ fourSprinGold10Brand.size }}</li>
+          <li><strong>Use:</strong> {{ fourSprinGold10Brand.use }}</li>
+          <li><strong>Price:</strong> {{ fourSprinGold10Brand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/foursprin-gold-10">View Foursprin Gold 10 details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img
+          [ngSrc]="fourSprinAv75Brand.image"
+          [alt]="fourSprinAv75Brand.name + ' product packaging'"
+          width="480"
+          height="480"
+        />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ fourSprinAv75Brand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ fourSprinAv75Brand.category }}</span>
+          <span>{{ fourSprinAv75Brand.dosage }}</span>
+        </div>
+        <p>{{ fourSprinAv75Brand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ fourSprinAv75Brand.size }}</li>
+          <li><strong>Use:</strong> {{ fourSprinAv75Brand.use }}</li>
+          <li><strong>Price:</strong> {{ fourSprinAv75Brand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/foursprin-av-75">View FourSprin AV 75 details</a>
+      </div>
+    </div>
+
+    <div class="featured-product">
+      <div class="product-image-wrap">
+        <img
+          [ngSrc]="fourprazD40Brand.image"
+          [alt]="fourprazD40Brand.name + ' product packaging'"
+          width="480"
+          height="480"
+        />
+      </div>
+
+      <div class="product-content">
+        <h2>{{ fourprazD40Brand.name }}</h2>
+        <div class="meta-row">
+          <span>{{ fourprazD40Brand.category }}</span>
+          <span>{{ fourprazD40Brand.dosage }}</span>
+        </div>
+        <p>{{ fourprazD40Brand.description }}</p>
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ fourprazD40Brand.size }}</li>
+          <li><strong>Use:</strong> {{ fourprazD40Brand.use }}</li>
+          <li><strong>Price:</strong> {{ fourprazD40Brand.price }}</li>
+        </ul>
+        <a class="product-link" routerLink="/fourpraz-d-40">View Fourpraz D 40 details</a>
       </div>
     </div>
 

@@ -1,0 +1,51 @@
+<section class="brand-detail-section">
+  <div class="brand-detail-container">
+    <a class="back-link" routerLink="/brands">Back to all brands</a>
+
+    <article class="brand-detail-card">
+      <div class="brand-image-wrap">
+        <img
+          [ngSrc]="product.image"
+          [alt]="product.name + ' product packaging'"
+          width="480"
+          height="480"
+          priority
+        />
+      </div>
+
+      <div class="brand-content">
+        <h1>{{ product.name }}</h1>
+        <div class="meta-row">
+          <span>{{ product.category }}</span>
+          <span>{{ product.dosage }}</span>
+        </div>
+        <p>{{ product.description }}</p>
+
+        <ul class="feature-list">
+          <li><strong>Pack Size:</strong> {{ product.packSize }}</li>
+          @if (product.use) {
+            <li><strong>General ingredient use:</strong> {{ product.use }}</li>
+          }
+          @if (product.price) {
+            <li>
+              <strong>Price:</strong> ₹{{ product.price }}
+              @if (product.priceDescription; as priceDescription) {
+                ({{ priceDescription.toLowerCase() }})
+              }
+            </li>
+          }
+        </ul>
+        @if (product.composition; as composition) {
+          <section class="composition-section" aria-labelledby="composition-heading">
+            <h2 id="composition-heading">Composition</h2>
+            <ul class="composition-list">
+              @for (ingredient of composition; track ingredient) {
+                <li>{{ ingredient }}</li>
+              }
+            </ul>
+          </section>
+        }
+      </div>
+    </article>
+  </div>
+</section>
